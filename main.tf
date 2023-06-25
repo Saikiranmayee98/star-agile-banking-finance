@@ -131,10 +131,10 @@ resource "aws_eip" "proj-eip" {
 
 #Creating Ec2 instance
 resource "aws_instance" "proj-instance" {
-  ami           = "ami-0cf13cb849b11b451" # eu-north-1
+  ami           = "ami-08e5424edfe926b43" # eu-north-1
   instance_type = "t3.micro"
-  availability_zone = "eu-north-1b"
-  key_name = "devopslabs.pem"
+  availability_zone = "eu-south-1b"
+  key_name = "sarika1"
 
   network_interface {
     network_interface_id = aws_network_interface.proj-ni.id
@@ -151,6 +151,6 @@ resource "aws_instance" "proj-instance" {
                 EOF
 
   tags = {
-      Name = "project-instance"
+      Name = "prod_server"
   }
 }
