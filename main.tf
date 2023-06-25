@@ -47,7 +47,7 @@ resource "aws_route_table" "proj-rt" {
 
 
 #Create Subnet
-resource "aws_subnet" "proj-subnet" {
+resource "aws_subnet" "prod_server" {
   vpc_id     = aws_vpc.proj-vpc.id
   cidr_block = "10.0.1.0/24"
   availability_zone= "eu-north-1b"
