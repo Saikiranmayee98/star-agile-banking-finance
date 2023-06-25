@@ -131,7 +131,7 @@ resource "aws_eip" "proj-eip" {
 
 #Creating Ec2 instance
 resource "aws_instance" "proj-instance" {
-  ami           = "ami-08e5424edfe926b43" # eu-north-1
+  ami           = "ami-08e5424edfe926b43" # eu-south-1b
   instance_type = "t3.micro"
   availability_zone = "eu-south-1b"
   key_name = "sarika1"
